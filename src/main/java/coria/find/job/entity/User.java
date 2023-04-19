@@ -6,8 +6,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @Getter @Setter @ToString
 public class User {
   @Id
@@ -15,10 +17,12 @@ public class User {
   @Column(name = "user_id")
   private Long id;
   private String name;
-  @NotNull
+
   private String password;
-  @NotNull
+
   private String email;
   private String image;
+  @OneToMany(mappedBy = "user")
+  private List<Postulation> postulations;
 
 }

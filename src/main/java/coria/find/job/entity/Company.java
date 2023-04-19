@@ -21,5 +21,7 @@ public class Company {
   private String location;
   private String description;
   private Integer age;
+  private String resume;
+  private Integer employes;
 
 }

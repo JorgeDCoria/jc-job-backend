@@ -23,5 +23,10 @@ public class Postulation {
   private LocalDate date;
   @NotNull
   private String description;
-  private String url;
+  private String location;
+  private Float salary;
+  private String note;
+  @ManyToOne
+  @JoinColumn(name = "user_id")
+  private User user;
 }
